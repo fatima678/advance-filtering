@@ -19,8 +19,11 @@ function App() {
     toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!==-1);
 
      //----------Radio Filter-------------
+     const handleChange = event =>{
+      setSelectedCategory(event.target.value)
 
-
+     }
+  
   return (
     <>
     <Sidebar/>

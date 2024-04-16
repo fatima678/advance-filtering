@@ -23,7 +23,19 @@ function App() {
       setSelectedCategory(event.target.value)
 
      }
-  
+    //  ----------Button Filter-------------
+     const handleClick = event =>{
+      setSelectedCategory(event.target.value)
+     }
+     function filteredData(products, selected, query){
+      let filterProducts = products
+      //filtering input items
+      
+
+     }
+
+
+
   return (
     <>
     <Sidebar/>

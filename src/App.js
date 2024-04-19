@@ -16,8 +16,9 @@ function App() {
     setQuery(event.target.value)
   }
 
-  const filteredItems = products.filter(product=> product.title.
-    toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!==-1);
+  const filteredItems = products.filter((product)=>
+     product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!==-1)
+    );
 
      //----------Radio Filter-------------
      const handleChange = event =>{
@@ -28,6 +29,7 @@ function App() {
      const handleClick = event =>{
       setSelectedCategory(event.target.value)
      }
+
      function filteredData(products, selected, query){
       let filterProducts = products
       //filtering input items

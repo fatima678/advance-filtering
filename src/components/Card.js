@@ -1,24 +1,25 @@
 import React from 'react'
-import { FaStar } from "react-icons/fa";
+// import { FaStar } from "react-icons/fa";
 import { BsBagHeartFill } from "react-icons/bs";
 
-export default function Card() {
+export default function Card({img, title, star, reviews, prevPrice, newPrice}) {
   return (
     
       <section className='card'>
-      <img src="https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg" alt='Shoe' className='card-img'></img>
+      <img src={img} 
+      alt={title}
+      className='card-img'>
+      </img>
+
       <div className='card-details'>
-        <h3 className='card-title'> Shoe</h3>
+        <h3 className='card-title'> {title}</h3>
         <section className='card-reviews'>
-          <FaStar className='ratings-start' />
-          <FaStar className='ratings-start'/> 
-          <FaStar className='ratings-start'/> 
-          <FaStar className='ratings-start'/>
-          <span className='total-reviews'>5</span>
+          {star} {star} {star} {star}
+          <span className='total-reviews'>{reviews}</span>
         </section>
         <section className='card-price'>
           <div className='price'>
-            <del>$300</del> 200
+            <del>{prevPrice}</del> {newPrice}
           </div>
           <div className='bag'>
           <BsBagHeartFill  className='bag-icon'/>

@@ -5,19 +5,20 @@ import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
 //import data
 import products from './db/data'
-import Category from "./Sidebar/Category/Category";
+// import Category from "./Sidebar/Category/Category";
 import Card from "./components/Card";
+import './index.css'
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null)
   const [query, setQuery] = useState("")
   //----------input Filter-------------
-  const handleInputChange = event =>{
+  const handleInputChange = (event) =>{
     setQuery(event.target.value)
-  }
+  };
 
   const filteredItems = products.filter((product)=>
-     product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!==-1)
+     product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !==-1
     );
 
      //----------Radio Filter-------------
@@ -68,7 +69,7 @@ function App() {
 
   return (
     <>
-    <Sidebar handleChange={handleChange}/>
+      <Sidebar handleChange={handleChange}/>
       <Nav query={query} handleInputChange={handleInputChange}/>
       <Recommended handleClick={handleClick}/>
       <Products result={result}/> 

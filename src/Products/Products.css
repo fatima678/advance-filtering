@@ -7,7 +7,7 @@
 }
 .card{
     margin: 20px;
-    border: 2px solid #e0dddd;
+    border: 2px solid #dad6d6;
     padding: 20px;
     cursor: pointer;
 }
@@ -36,6 +36,6 @@
     align-items: center;
 }
 .bag-icon{
-    color: #535353;
+    color: #313030;
     
 }
